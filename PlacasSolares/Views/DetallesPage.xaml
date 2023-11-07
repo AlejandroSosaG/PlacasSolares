@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlacasSolares.Views.DetallesPage"
+             Title="DetallesPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Alejandro Sosa Garcia" FontSize="Large" VerticalOptions="Center" Margin="10,0,0,0"/>
+                <Image Source="mapa.png" Grid.Column="1" BackgroundColor="LightBlue" Margin="0,20,10,0"/>
+                <CheckBox Grid.Column="2" Margin="20" Background="transparent" MaximumHeightRequest="100"/>
+            </Grid>
+            <Label Text="123456789" FontSize="Large" Margin="10,0,0,0"/>
+            <Label Text="c/ Martinete nº 53" FontSize="Large" Margin="10,10,0,0"/>
+            <HorizontalStackLayout Margin="20,50,0,100">
+                <Button ImageSource="camara2.png" Clicked="añadirFoto" CornerRadius="35" BackgroundColor="Transparent"/>
+            </HorizontalStackLayout>
+            <Label Text="Añade una nota.." Margin="10,0" FontSize="Large"/>
+            <Entry  MinimumWidthRequest="200" Text="" BackgroundColor="Gray" Margin="10" FontSize="Large"></Entry>
+            <Button Text="Enviar" Clicked="Guardar"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

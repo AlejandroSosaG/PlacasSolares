@@ -13,6 +13,6 @@ public partial class CitasPage : ContentPage
 
     private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new Page());
+        await Navigation.PushAsync(new DetallesPage());
     }
 }

@@ -13,7 +13,7 @@
                             <Grid Padding="10">
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer
-                                    Tapped="Click" />
+                                    Tapped="TapGestureRecognizer_Tapped" />
                                 </Grid.GestureRecognizers>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
