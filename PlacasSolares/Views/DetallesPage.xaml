@@ -4,7 +4,7 @@
              x:Class="PlacasSolares.Views.DetallesPage"
              Title="DetallesPage">
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout BackgroundColor="LightBlue">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -15,17 +15,21 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="Alejandro Sosa Garcia" FontSize="Large" VerticalOptions="Center" Margin="10,0,0,0"/>
-                <Image Source="mapa.png" Grid.Column="1" BackgroundColor="LightBlue" Margin="0,20,10,0"/>
-                <CheckBox Grid.Column="2" Margin="20" Background="transparent" MaximumHeightRequest="100"/>
+                <Image Source="mapa.png" Grid.Column="1" BackgroundColor="Transparent" Margin="0,20,10,0" Scale="1.4">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Mapa" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <CheckBox Grid.Column="2" Margin="30" Background="transparent" MaximumHeightRequest="100" Scale="2.5"/>
             </Grid>
             <Label Text="123456789" FontSize="Large" Margin="10,0,0,0"/>
             <Label Text="c/ Martinete nº 53" FontSize="Large" Margin="10,10,0,0"/>
             <HorizontalStackLayout Margin="20,50,0,100">
                 <Button ImageSource="camara2.png" Clicked="añadirFoto" CornerRadius="35" BackgroundColor="Transparent"/>
             </HorizontalStackLayout>
-            <Label Text="Añade una nota.." Margin="10,0" FontSize="Large"/>
-            <Entry  MinimumWidthRequest="200" Text="" BackgroundColor="Gray" Margin="10" FontSize="Large"></Entry>
-            <Button Text="Enviar" Clicked="Guardar"></Button>
+            <Editor  Placeholder="Añade una nota..." MinimumHeightRequest="200" MinimumWidthRequest="200" PlaceholderColor="Black"
+                    Text="" BackgroundColor="Transparent" Margin="20" FontSize="Large" TextChanged="Entry_TextChanged" Completed="Entry_Completed"></Editor>
+            <Button Text="Enviar" Clicked="Guardar" Margin="0,100" MaximumWidthRequest="150" FontSize="Large"></Button>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
