@@ -12,8 +12,16 @@ public partial class DetallesPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void añadirFoto(object sender, EventArgs e)
+    private async void añadirFoto(object sender, EventArgs e)
     {
+        var foto = await MediaPicker.CapturePhotoAsync();
+        if (foto != null)
+        {
+            var memoriaStream = await foto.OpenReadAsync();
+            Galeria.Source = ImageSource.FromStream(() => memoriaStream);
+            Galeria.MaximumWidthRequest = 100;
+            Galeria.MaximumHeightRequest = 100;
+        }
     }
     private async void Guardar(object sender, EventArgs e)
 	{

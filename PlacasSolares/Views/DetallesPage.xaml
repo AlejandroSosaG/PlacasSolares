@@ -26,6 +26,7 @@
             <Label Text="c/ Martinete nº 53" FontSize="Large" Margin="10,10,0,0"/>
             <HorizontalStackLayout Margin="20,50,0,100">
                 <Button ImageSource="camara2.png" Clicked="añadirFoto" CornerRadius="35" BackgroundColor="Transparent"/>
+                <Image x:Name="Galeria"/>
             </HorizontalStackLayout>
             <Editor  Placeholder="Añade una nota..." MinimumHeightRequest="200" MinimumWidthRequest="200" PlaceholderColor="Black"
                     Text="" BackgroundColor="Transparent" Margin="20" FontSize="Large" TextChanged="Entry_TextChanged" Completed="Entry_Completed"></Editor>
